@@ -1,6 +1,6 @@
 package mack.dao.usuario;
 
-import mack.entities.Usuario;
+import mack.entities.Usuario_antig;
 import java.util.*;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -19,10 +19,10 @@ public class UsuarioDAOJPAImpl implements UsuarioDAO {
     @Override
     public List buscaUsuarioPorId(final int id)
             throws UsuarioNaoEncontradoException {
-        List<Usuario> u = new ArrayList<Usuario>();
+        List<Usuario_antig> u = new ArrayList<Usuario_antig>();
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("UsuarioPU");
         EntityManager em = emf.createEntityManager();
-        Usuario usuario = em.find(Usuario.class, id);
+        Usuario_antig usuario = em.find(Usuario_antig.class, id);
         if (usuario == null) {
             throw new UsuarioNaoEncontradoException("usuario não encontrado");
         }else {
@@ -57,7 +57,7 @@ public class UsuarioDAOJPAImpl implements UsuarioDAO {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("UsuarioPU");
         EntityManager em = emf.createEntityManager();
 
-        Usuario encontrada = em.find(Usuario.class, id);
+        Usuario_antig encontrada = em.find(Usuario_antig.class, id);
 
         em.getTransaction().begin();
         em.remove(encontrada);
@@ -70,14 +70,14 @@ public class UsuarioDAOJPAImpl implements UsuarioDAO {
     }
 
     @Override
-    public Usuario criaUsuario(
+    public Usuario_antig criaUsuario(
             final String nome,
             final String sobrenome) {
         
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("UsuarioPU");
         EntityManager em = emf.createEntityManager();
 
-        Usuario u = new Usuario();
+        Usuario_antig u = new Usuario_antig();
         u.setNome(nome);
         u.setSobrenome(sobrenome);
         u.getId();
@@ -102,7 +102,7 @@ public class UsuarioDAOJPAImpl implements UsuarioDAO {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("UsuarioPU");
         EntityManager em = emf.createEntityManager();
 
-        Usuario u = new Usuario(id, nome, sobrenome);
+        Usuario_antig u = new Usuario_antig(id, nome, sobrenome);
         u.setNome(nome);
         u.setSobrenome(sobrenome);
 

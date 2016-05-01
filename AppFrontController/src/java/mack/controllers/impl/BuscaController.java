@@ -12,7 +12,7 @@ import java.util.logging.Logger;
 import mack.controllers.AbstractController;
 import mack.dao.usuario.UsuarioDAO;
 import mack.dao.usuario.UsuarioDAOFactory;
-import mack.entities.Usuario;
+import mack.entities.Usuario_antig;
 
 /**
  *
@@ -23,7 +23,7 @@ public class BuscaController extends AbstractController {
     public void execute() {
         try {
 
-            List usuarios = new ArrayList<Usuario>();
+            List usuarios = new ArrayList<Usuario_antig>();
             UsuarioDAO dao = UsuarioDAOFactory.getUsuarioDAO();
             usuarios = (List) dao.buscaUsuarioPorNome(this.getRequest().getParameter("nome"));
             this.setReturnPage("/index.jsp");

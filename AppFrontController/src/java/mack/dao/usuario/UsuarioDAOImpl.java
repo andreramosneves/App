@@ -1,6 +1,6 @@
 package mack.dao.usuario;
 
-import mack.entities.Usuario;
+import mack.entities.Usuario_antig;
 import java.sql.*;
 import java.util.*;
 import mack.dao.exception.DAORuntimeException;
@@ -21,7 +21,7 @@ class UsuarioDAOImpl implements UsuarioDAO {
     public List buscaUsuarioPorId(final int id)
             throws UsuarioNaoEncontradoException {
         Connection conn = UsuarioUtil.getConnection();
-        Usuario result = null;
+        Usuario_antig result = null;
         ResultSet rs = null;
         PreparedStatement stmtSelect = null;
         try {
@@ -37,7 +37,7 @@ class UsuarioDAOImpl implements UsuarioDAO {
                 throw new UsuarioNaoEncontradoException("id = " + id);
             }
             Iterator iter = c.iterator();
-            result = (Usuario) iter.next();
+            result = (Usuario_antig) iter.next();
         } catch (SQLException ex) {
             log.error(ex);
             throw new DAORuntimeException(ex);
@@ -102,10 +102,10 @@ class UsuarioDAOImpl implements UsuarioDAO {
     }
 
     @Override
-    public Usuario criaUsuario(
+    public Usuario_antig criaUsuario(
             final String nome,
             final String sobrenome) {
-        Usuario result = null;
+        Usuario_antig result = null;
         PreparedStatement stmtInsert = null;
         Connection conn = UsuarioUtil.getConnection();
         try {
@@ -129,7 +129,7 @@ class UsuarioDAOImpl implements UsuarioDAO {
                         "executeUpdate return value: "
                         + rows);
             }
-            result = new Usuario(usuario_id,nome, sobrenome);
+            result = new Usuario_antig(usuario_id,nome, sobrenome);
 
         } catch (SQLException ex) {
             log.error(ex);

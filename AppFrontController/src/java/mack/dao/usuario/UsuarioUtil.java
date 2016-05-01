@@ -1,6 +1,6 @@
 package mack.dao.usuario;
 
-import mack.entities.Usuario;
+import mack.entities.Usuario_antig;
 import java.sql.*;
 import java.util.Collection;
 import javax.sql.*;
@@ -111,7 +111,7 @@ public final class UsuarioUtil {
             int id = rs.getInt("usuario_id");
             String nome = rs.getString("nome");
             String sobrenome = rs.getString("sobrenome");
-            Usuario u = new Usuario(id, nome, sobrenome);
+            Usuario_antig u = new Usuario_antig(id, nome, sobrenome);
             result.add(u);
         }
 

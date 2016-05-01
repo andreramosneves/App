@@ -10,7 +10,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "tb_usuario")
-public class Usuario {
+public class Usuario_antig {
 
     @Id
     @Column(name = "usuario_id")
@@ -25,10 +25,10 @@ public class Usuario {
     @Column(name = "sobrenome")
     private String sobrenome;
 
-    public Usuario() {
+    public Usuario_antig() {
     }
 
-    public Usuario(int id, String nome, String sobrenome) {
+    public Usuario_antig(int id, String nome, String sobrenome) {
         this.id = id;
         this.nome = nome;
         this.sobrenome = sobrenome;

@@ -1,29 +1,22 @@
 
 package mack.controllers.impl;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import javax.ejb.EJB;
 import mack.controllers.AbstractController;
-import mack.dao.usuario.UsuarioDAO;
-import mack.dao.usuario.UsuarioDAOFactory;
-import mack.entities.Usuario;
+import ejb.beans.UsuarioBean;
 
 
 public class ListaController extends AbstractController {
 
+ @EJB
+ UsuarioBean userBean;
     public void execute() {
-        try {
-            List usuarios = new ArrayList<Usuario>();
-            UsuarioDAO dao = UsuarioDAOFactory.getUsuarioDAO();
-            usuarios = (List) dao.buscaTodosUsuarios();
+       
             this.setReturnPage("/index.jsp");
-            this.getRequest().setAttribute("usuarios", usuarios);
+            this.getRequest().setAttribute("usuarios", userBean.list());
 
-        }catch(Exception ex)   { 
-            Logger.getLogger(ListaController.class.getName()).log(Level.SEVERE, null, ex);
-        }
+       
 
     }
 

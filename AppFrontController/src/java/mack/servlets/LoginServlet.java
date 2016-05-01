@@ -1,7 +1,12 @@
 package mack.servlets;
 
+import ejb.beans.UsuarioBean;
+import ejb.entities.Usuario;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.security.NoSuchAlgorithmException;
+import java.security.spec.InvalidKeySpecException;
+import javax.ejb.EJB;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.Cookie;
@@ -10,19 +15,27 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+
 public class LoginServlet extends HttpServlet {
 
     private static final long serialVersionUID = 1L;
     private final String userID = "admin";
     private final String password = "senha";
+    
+    @EJB
+    UsuarioBean userBean;
 
     protected void doPost(HttpServletRequest request,
-            HttpServletResponse response) throws ServletException, IOException {
+        
+         HttpServletResponse response) throws ServletException, IOException {
         // get request parameters for userID and password
+        
         String usuarioRequest = request.getParameter("login");
         String senhaRequest = request.getParameter("senha");
-
-        if (userID.equals(usuarioRequest) && password.equals(senhaRequest)) {
+        
+                
+        
+        if (userBean.buscaPorNomeSenha(usuarioRequest, senhaRequest)) {
             HttpSession session = request.getSession();
             session.setAttribute("usuario", usuarioRequest);
             //setting session to expiry in 30 mins
