@@ -14,8 +14,6 @@ import javax.naming.NamingException;
 
 public class ListaController extends AbstractController {
 
- @EJB
- UsuarioBean userBean;
     public void execute() {
         
      try {
