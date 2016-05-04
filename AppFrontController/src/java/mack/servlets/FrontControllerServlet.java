@@ -31,6 +31,7 @@ public class FrontControllerServlet extends HttpServlet {
         Controller control = ControllerFactory.getControllerByFullClassName(controller);
          control.init(request);
             control.execute();
+            System.out.println(control.getReturnPage());
             RequestDispatcher requestDispatcher = 
                        getServletContext().getRequestDispatcher(control.getReturnPage());
             requestDispatcher.forward(request, response);

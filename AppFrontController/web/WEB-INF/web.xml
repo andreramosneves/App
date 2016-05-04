@@ -36,10 +36,6 @@
         <servlet-name>DataSourceServlet</servlet-name>
         <servlet-class>datasource.servlets.DataSourceServlet</servlet-class>
     </servlet>
-    <servlet>
-        <servlet-name>ListaServlet</servlet-name>
-        <servlet-class>datasource.servlets.ListaServlet</servlet-class>
-    </servlet>
     <servlet-mapping>
         <servlet-name>FrontControllerServlet</servlet-name>
         <url-pattern>/FrontControllerServlet</url-pattern>
@@ -63,10 +59,6 @@
     <servlet-mapping>
         <servlet-name>DataSourceServlet</servlet-name>
         <url-pattern>/DataSourceServlet</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>ListaServlet</servlet-name>
-        <url-pattern>/ListaServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
