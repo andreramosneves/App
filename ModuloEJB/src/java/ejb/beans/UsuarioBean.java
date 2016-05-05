@@ -1,5 +1,6 @@
 package ejb.beans;
 import ejb.entities.Usuario;
+import ejb.interceptor.AcessoItensInterceptor;
 import ejb.interceptor.LogInterceptor;
 import java.security.NoSuchAlgorithmException;
 import java.security.spec.InvalidKeySpecException;
@@ -12,16 +13,17 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 @Stateless
 @LocalBean
-@Interceptors (LogInterceptor.class)
+
 public class UsuarioBean {
     
 
 @PersistenceContext(unitName = "DerbyPU")
  private EntityManager em;
-
+@Interceptors (LogInterceptor.class)
  public void save(Usuario u) {
  em.persist(u);
  }
+  
   @Interceptors (LogInterceptor.class)
  public List<Usuario> list() {
  Query query = em.createQuery("FROM Usuario u");
@@ -29,7 +31,7 @@ public class UsuarioBean {
  return list;
  }
 
- @Interceptors (LogInterceptor.class)
+@Interceptors (LogInterceptor.class)
 public boolean buscaPorNomeSenha(final String nome, String senha) {
         try {
             Query query = em.createQuery("FROM Usuario u where u.nome = :username");
