@@ -36,6 +36,7 @@ public class LogInterceptor {
         if (conn != null) {
             conn.close();
         }
+        
         System.out.println("---" + context.getMethod());
         return context.proceed();
     }

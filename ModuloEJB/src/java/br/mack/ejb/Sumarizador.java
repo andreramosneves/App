@@ -24,7 +24,7 @@ public class Sumarizador {
     @PersistenceContext(unitName = "DerbyPU")
     private EntityManager em;
 
-    @Schedule(second = "*/10", minute = "*", hour = "*", persistent = false)
+    @Schedule(second = "*/600", minute = "*", hour = "*", persistent = false)
     public void sumariza() {
         HashMap<String, Integer> sumario;
         sumario = new HashMap<String, Integer>();

@@ -18,8 +18,10 @@ public class Usuario {
             sequenceName = "usuario_id_seq", allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "usuarioGenerator")
     private int id;
+   
     @Column(name = "nome")
     private String nome;
+   
     @Column(name = "sobrenome")
     private String sobrenome;
     
