@@ -7,3 +7,23 @@ Bloco 2
 gerando identificador unico de tamanho fixo para o valor de entrada.
 
 2-Sim, questões éticas na qual o desenvolvedor não pode ter conhecimento da senha do usuário e também na garantia de segurança de dados do usuário, ou seja , a senha não cair nas mãos erradas.
+
+Bloco 3
+
+1 - Substituindo as classes de queue como mostra abaixo:
+
+QueueConnectionFactory -> TopicConnectionFactory
+QueueConnection - > TopicConnection
+Queue - > Topic
+QueueSession -> TopicSession
+QueueSender -> TopicPublisher
+QueueReceiver -> TopicSubscriber
+
+
+2 - Quando for necessario enviar a mensagens para todos assinantes.
+
+
+Bloco 4
+
+
+
