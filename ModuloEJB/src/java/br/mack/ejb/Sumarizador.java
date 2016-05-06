@@ -1,3 +1,5 @@
+package br.mack.ejb;
+
 
 import ejb.entities.Log;
 import java.io.FileNotFoundException;
@@ -49,7 +51,7 @@ public class Sumarizador {
     private void publicaDados(HashMap<String, Integer> hash) {
         PrintWriter writer = null;
         try {
-            writer = new PrintWriter("C:/temp/Dados/monitoramento.xml", "UTF-8");
+            writer = new PrintWriter("C:/temp/App/Dados/monitoramento.xml", "UTF-8");
 
             writer.println("<cenario>");
             writer.println("<retangulos>");
