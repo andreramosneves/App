@@ -1,0 +1,18 @@
+<cenario>
+<retangulos>
+<retangulo>
+<posx>20</posx>
+<posy>20</posy>
+<largura>50</largura>
+<altura>3</altura>
+<item>Log:public boolean ejb.beans.UsuarioBean.buscaPorNomeSenha(java.lang.String,java.lang.String)</item>
+</retangulo>
+<retangulo>
+<posx>90</posx>
+<posy>20</posy>
+<largura>50</largura>
+<altura>12</altura>
+<item>Log:public java.util.List ejb.beans.UsuarioBean.list()</item>
+</retangulo>
+</retangulos>
+</cenario>
