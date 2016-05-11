@@ -44,7 +44,9 @@ public class LoginServlet extends HttpServlet {
             userName.setMaxAge(30 * 60);
             response.addCookie(userName);
             response.sendRedirect("sucessoLogin.jsp");
+            userBean.sucesso();
         } else {
+            userBean.falha();
             RequestDispatcher rd = getServletContext().getRequestDispatcher("/login.html");
             PrintWriter out = response.getWriter();
             out.println("<font color=red>Usuario ou senha incorretos.</font>");

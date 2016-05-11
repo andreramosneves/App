@@ -23,7 +23,7 @@ import javax.persistence.PersistenceContext;
 public class ProcessadorDeEventos implements MessageListener {
 
 
-    @PersistenceContext(unitName = "DerbyPU")
+    @PersistenceContext(unitName = "ModuloEJBPU")
     private EntityManager em;
     private final static Logger LOGGER
             = Logger.getLogger(ProcessadorDeEventos.class.toString());
