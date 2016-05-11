@@ -1,4 +1,4 @@
-package ejb.entities;
+package shared.entities;
 
 
 import java.sql.Timestamp;

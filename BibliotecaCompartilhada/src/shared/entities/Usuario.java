@@ -1,5 +1,14 @@
-package ejb.entities;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package shared.entities;
 
+/**
+ *
+ * @author denis
+ */
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -15,7 +24,7 @@ public class Usuario {
     @Id
     @Column(name = "usuario_id")
     @SequenceGenerator(name = "usuarioGenerator",
-            sequenceName = "usuario_id_seq", allocationSize = 1)
+            sequenceName = "usuario_id_sequence", allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "usuarioGenerator")
     private int id;
    

@@ -27,12 +27,17 @@ and open the template in the editor.
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/projeto.css">
     </head>
     <body>
         <form name="formulario" action="FrontControllerServlet?control=Login" method="POST" >
             <p>
-                <label for="lg">Login</label>
-                <input type="text" name="login" id="lg"/>
+                <label for="lg">Nome</label>
+                <input type="text" name="nome" id="lg"/>
+            </p>
+            <p>
+                <label for="lg">Sobrenome</label>
+                <input type="text" name="sobrenome" id="lg"/>
             </p>
             <p>
                 <label for="senha">Senha</label>

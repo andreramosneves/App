@@ -29,12 +29,12 @@
         <servlet-class>mack.servlets.MeuPrimeiroBeanServlet</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>JPAServlet</servlet-name>
-        <servlet-class>datasource.servlets.JPAServlet</servlet-class>
-    </servlet>
-    <servlet>
         <servlet-name>DataSourceServlet</servlet-name>
         <servlet-class>datasource.servlets.DataSourceServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CadLogin</servlet-name>
+        <servlet-class>mack.servlets.CadLoginServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>FrontControllerServlet</servlet-name>
@@ -53,12 +53,12 @@
         <url-pattern>/MeuPrimeiroBeanServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>JPAServlet</servlet-name>
-        <url-pattern>/JPAServlet</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
         <servlet-name>DataSourceServlet</servlet-name>
         <url-pattern>/DataSourceServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CadLogin</servlet-name>
+        <url-pattern>/CadLogin</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

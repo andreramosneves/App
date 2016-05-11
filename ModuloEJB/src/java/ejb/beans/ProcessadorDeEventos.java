@@ -1,11 +1,10 @@
 package ejb.beans;
 
-import ejb.entities.Log;
+
 import java.sql.Timestamp;
 import java.util.Date;
 import java.util.logging.Logger;
 import javax.ejb.ActivationConfigProperty;
-import javax.ejb.EJB;
 import javax.ejb.MessageDriven;
 import javax.jms.JMSException;
 import javax.jms.Message;
@@ -13,6 +12,7 @@ import javax.jms.MessageListener;
 import javax.jms.TextMessage;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import shared.entities.Log;
 
 @MessageDriven(name = "EventMDB", activationConfig = {
     @ActivationConfigProperty(propertyName = "destinationType", propertyValue

@@ -1,11 +1,8 @@
 package mack.servlets;
 
 import ejb.beans.UsuarioBean;
-import ejb.entities.Usuario;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.security.NoSuchAlgorithmException;
-import java.security.spec.InvalidKeySpecException;
 import javax.ejb.EJB;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -44,7 +41,9 @@ public class LoginServlet extends HttpServlet {
             userName.setMaxAge(30 * 60);
             response.addCookie(userName);
             response.sendRedirect("sucessoLogin.jsp");
+            userBean.sucesso();
         } else {
+            userBean.falha();
             RequestDispatcher rd = getServletContext().getRequestDispatcher("/login.html");
             PrintWriter out = response.getWriter();
             out.println("<font color=red>Usuario ou senha incorretos.</font>");

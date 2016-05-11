@@ -3,15 +3,16 @@
     Created on : 07/04/2014, 20:49:49
 --%>
 
-<%@page import="ejb.entities.Usuario"%>
+<%@page import="shared.entities.Usuario"%>
 <%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" 
-            content="text/html; charset=UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="css/projeto.css">
+        
         <title>JSP Page</title>
     </head>
     <body>

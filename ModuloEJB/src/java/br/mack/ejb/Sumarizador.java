@@ -1,7 +1,7 @@
 package br.mack.ejb;
 
 
-import ejb.entities.Log;
+
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
@@ -17,6 +17,7 @@ import javax.ejb.Schedule;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
+import shared.entities.Log;
 
 
 @Stateless
