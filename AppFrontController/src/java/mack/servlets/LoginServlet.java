@@ -1,8 +1,11 @@
 package mack.servlets;
 
 import ejb.beans.UsuarioBean;
+import ejb.entities.Usuario;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.security.NoSuchAlgorithmException;
+import java.security.spec.InvalidKeySpecException;
 import javax.ejb.EJB;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
