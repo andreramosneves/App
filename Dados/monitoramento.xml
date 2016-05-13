@@ -1,0 +1,25 @@
+<cenario>
+<retangulos>
+<retangulo>
+<posx>20</posx>
+<posy>20</posy>
+<largura>50</largura>
+<altura>2</altura>
+<item>Log:public void ejb.beans.UsuarioBean.sucesso()</item>
+</retangulo>
+<retangulo>
+<posx>90</posx>
+<posy>20</posy>
+<largura>50</largura>
+<altura>4</altura>
+<item>Log:public boolean ejb.beans.UsuarioBean.buscaPorNomeSenha(java.lang.String,java.lang.String)</item>
+</retangulo>
+<retangulo>
+<posx>160</posx>
+<posy>20</posy>
+<largura>50</largura>
+<altura>19</altura>
+<item>Log:public java.util.List ejb.beans.UsuarioBean.list()</item>
+</retangulo>
+</retangulos>
+</cenario>
